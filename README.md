@@ -1,6 +1,6 @@
 # mkfifo
 
-TODO: Write a description here
+This small library monkey patches `File` to add two new class methods: `fifo` and `fifo?`.
 
 ## Installation
 
