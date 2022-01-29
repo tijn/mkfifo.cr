@@ -1,5 +1,5 @@
 class File < IO::FileDescriptor
-  def self.mkfifo(path : Path | String, mode = 0o777) : Nil
+  def self.mkfifo(path : Path | String, mode = DEFAULT_CREATE_PERMISSIONS) : Nil
     LibC.mkfifo(path.to_s, mode)
   end
 

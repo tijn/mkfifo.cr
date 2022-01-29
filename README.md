@@ -2,6 +2,13 @@
 
 This small library monkey patches `File` to add two new class methods: `fifo` and `fifo?`.
 
+I made this because:
+
+1. I need it for my hobby project
+2. I found [this dicussion about it](https://forum.crystal-lang.org/t/fifo-file-in-linux/271), so others need it too
+
+It's basically a copy of [Ruby's `File.mkfifo`](https://forum.crystal-lang.org/t/fifo-file-in-linux/271), but I changed the permissions to match Crystal's default for new files.
+
 ## Installation
 
 1. Add the dependency to your `shard.yml`:
@@ -34,10 +41,6 @@ File.open(path) do |fifo|
 end
 ```
 
-## Development
-
-TODO: Write development instructions here
-
 ## Contributing
 
 1. Fork it (<https://github.com/tijn/mkfifo/fork>)
@@ -49,3 +52,8 @@ TODO: Write development instructions here
 ## Contributors
 
 - [Tijn Schuurmans](https://github.com/tijn) - creator and maintainer
+
+
+## Alternatives
+
+I just found [fifo.cr](https://github.com/alexherbo2/fifo.cr) which takes a different approach which is arguably somewhat cleaner since it avoids monkey patching.
