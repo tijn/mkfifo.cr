@@ -56,4 +56,4 @@ end
 
 ## Alternatives
 
-I just found [fifo.cr](https://github.com/alexherbo2/fifo.cr) which takes a different approach which is arguably somewhat cleaner since it avoids monkey patching.
+I just found [fifo.cr](https://github.com/alexherbo2/fifo.cr) which takes a different approach, that is arguably somewhat cleaner since it avoids monkey patching.
